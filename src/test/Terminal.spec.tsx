@@ -47,17 +47,17 @@ describe("Terminal Component", () => {
       );
     });
 
-    it("should return 'visitor' when user type 'whoami' cmd", async () => {
+    it("should return 'guest' when user type 'whoami' cmd", async () => {
       await user.type(terminalInput, "whoami{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
-        "visitor"
+        "guest"
       );
     });
 
-    it("should return '/home/satnaing' when user type 'pwd' cmd", async () => {
+    it("should return '/home/kurogeek' when user type 'pwd' cmd", async () => {
       await user.type(terminalInput, "pwd{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
-        "/home/satnaing"
+        "/home/kurogeek"
       );
     });
 
